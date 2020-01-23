@@ -1,0 +1,133 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2020-01-23T11:11:11.125Z",
+    "end": "2020-01-23T11:11:26.840Z",
+    "duration": 15715,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "danger",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "78c98944-054b-404b-9c11-7d139e4806c9",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "a6b24a8a-401c-4c5c-8e6e-a7af4b908e61",
+        "title": "Sample automated testing",
+        "fullFile": "D:\\seleniumwithnodejs\\test\\homePage.test.js",
+        "file": "\\test\\homePage.test.js",
+        "beforeHooks": [
+          {
+            "title": "\"before each\" hook",
+            "fullTitle": "Sample automated testing \"before each\" hook",
+            "timedOut": false,
+            "duration": 5807,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "page = new Page();\ndriver = page.driver;\nawait page.visit('https://enterprise.taskworld.com/login');",
+            "err": {},
+            "isRoot": false,
+            "uuid": "b21e3787-7e7f-438a-be04-886496bc034c",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "afterHooks": [
+          {
+            "title": "\"after each\" hook",
+            "fullTitle": "Sample automated testing \"after each\" hook",
+            "timedOut": false,
+            "duration": 164,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "await page.quit();",
+            "err": {},
+            "isRoot": false,
+            "uuid": "ac584eee-82b1-4cdf-870e-e7c1c190884e",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "tests": [
+          {
+            "title": "Find the input and submit buttons",
+            "fullTitle": "Sample automated testing Find the input and submit buttons",
+            "timedOut": false,
+            "duration": 1107,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
+            "pending": false,
+            "code": "await page.findInputAndButton();\nexpect(result.emailEnabled).to.equal(true);\nexpect(result.passwordEnabled).to.equal(true);\nexpect(result.loginButtonText).to.include('Log In');",
+            "err": {
+              "message": "ReferenceError: result is not defined",
+              "estack": "ReferenceError: result is not defined\n    at Context.<anonymous> (test\\homePage.test.js:29:28)\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+            },
+            "isRoot": false,
+            "uuid": "456ad4b0-cafb-477c-9ef3-1bec573b3464",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "Log in using fake email and password",
+            "fullTitle": "Sample automated testing Log in using fake email and password",
+            "timedOut": false,
+            "duration": 1284,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
+            "pending": false,
+            "code": "const result = await page.loginTaskWorld();\nexpect(result.length).to.be.equal(\"Invalid email or password.\")",
+            "err": {
+              "message": "ElementNotInteractableError: element not interactable\n  (Session info: chrome=79.0.3945.117)",
+              "estack": "ElementNotInteractableError: element not interactable\n  (Session info: chrome=79.0.3945.117)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:550:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:563:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:489:26)\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)\n    at async thenableWebDriverProxy.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:699:17)\n    at async Page.write (lib\\basePage.js:47:16)\n    at async Page.loginTaskWorld (lib\\homePage.js:38:5)\n    at async Context.<anonymous> (test\\homePage.test.js:36:32)"
+            },
+            "isRoot": false,
+            "uuid": "4f1449b3-e5fa-4983-b2a4-ec004318bd45",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [],
+        "failures": [
+          "456ad4b0-cafb-477c-9ef3-1bec573b3464",
+          "4f1449b3-e5fa-4983-b2a4-ec004318bd45"
+        ],
+        "pending": [],
+        "skipped": [],
+        "duration": 2391,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 50000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2020
+}
